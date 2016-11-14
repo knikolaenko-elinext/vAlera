@@ -3,6 +3,8 @@ package by.knick.valera.flow.render;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import org.w3c.dom.html.HTMLAnchorElement;
+
 import by.knick.valera.flow.DigStep;
 import by.knick.valera.ui.DashboardController;
 import by.knick.valera.ui.UiStrings;
@@ -25,6 +27,8 @@ public class DigStepWidget implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		digLinkSelectorPickerController.setStickToClazz(HTMLAnchorElement.class);
+		
 		valueProperty.addListener((obs, oldVal, newVal) -> {
 			if (newVal == null) {
 				digLinkSelectorPickerController.getValueProperty().set(null);
