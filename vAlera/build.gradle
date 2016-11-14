@@ -1,0 +1,41 @@
+buildscript {
+	ext {
+		springBootVersion = '1.4.1.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+jar {
+	baseName = 'vAlera'
+	version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compileOnly ('org.projectlombok:lombok:1.16.10')	
+	
+	compile group: 'org.jsoup', name: 'jsoup', version: '1.10.1'
+	compile group: 'io.reactivex', name: 'rxjavafx', version: '0.2.0'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.4'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.4'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.8.4'	
+	
+	compile ('commons-io:commons-io:2.5')
+}

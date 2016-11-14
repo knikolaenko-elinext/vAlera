@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane prefHeight="400.0" prefWidth="400.0" vgap="3.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.knick.valera.flow.render.StartStepWidget">
+	<children>
+	  <Label text="Name:" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+      <TextField fx:id="nameTextField" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+   	  <Label text="URL:" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+      <TextField fx:id="urlTextField" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#onOpenBtnClicked" text="Open" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="4.0" />
+         </GridPane.margin></Button> 
+   </children>
+   <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" />
+      <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

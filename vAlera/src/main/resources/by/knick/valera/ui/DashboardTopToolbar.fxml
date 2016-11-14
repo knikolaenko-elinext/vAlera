@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="by.knick.valera.ui.DashboardTopToolbar">
+   <children>
+      <ToolBar HBox.hgrow="ALWAYS">
+        <items>
+          <Button fx:id="runButton" mnemonicParsing="false" onAction="#onRunBtnClicked" text="Run" />
+          <Button fx:id="stopButton" disable="true" mnemonicParsing="false" onAction="#onStopBtnClicked" text="Stop" />
+        </items>
+      </ToolBar>
+   </children>
+</HBox>

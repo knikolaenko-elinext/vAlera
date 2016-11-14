@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane prefHeight="400.0" prefWidth="400.0" vgap="3.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.knick.valera.flow.render.ListStepConfigWidget">
+   <children>
+   	  <Label text="List item selector:" GridPane.rowIndex="0" />
+      <fx:include fx:id="listElementCssSelector" source="HtmlElementCssSelectorField.fxml" GridPane.rowIndex="1" />
+      
+      <Label text="Something on 1st row:" GridPane.rowIndex="4" />
+      <fx:include fx:id="firstElementSelector" source="HtmlElementPickerField.fxml" GridPane.rowIndex="5" />
+      <Label text="Same on 2nd row:" GridPane.rowIndex="6" />
+      <fx:include fx:id="secondElementSelector" source="HtmlElementPickerField.fxml" GridPane.rowIndex="7" />
+      
+   </children>
+   <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

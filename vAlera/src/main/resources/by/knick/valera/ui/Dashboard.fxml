@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.knick.valera.ui.DashboardController">
+	<center>
+		<SplitPane dividerPositions="0.33" BorderPane.alignment="CENTER">
+			<items>
+				<AnchorPane minHeight="0.0" minWidth="0.0">
+					<children>
+						<TabPane tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<tabs>
+								<Tab text="Workflow">
+									<content>
+										<fx:include fx:id="workflowEditor" source="WorkflowEditor.fxml" />
+									</content>
+								</Tab>
+								<Tab onSelectionChanged="#onConfigTabSelected" text="Config">
+									<content>
+										<fx:include fx:id="configPreviewWidget" source="ConfigPreviewWidget.fxml" />
+									</content>
+								</Tab>
+
+							</tabs>
+						</TabPane>
+					</children>
+				</AnchorPane>
+				<AnchorPane minHeight="0.0" minWidth="0.0">
+					<children>
+						<SplitPane dividerPositions="0.7" orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+							<items>
+								<AnchorPane minHeight="0.0" minWidth="0.0">
+									<fx:include fx:id="browser" source="Browser.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+								</AnchorPane>
+								<TabPane tabClosingPolicy="UNAVAILABLE">
+									<tabs>
+										<Tab onSelectionChanged="#onPayloadTabSelected" text="Payload">
+											<content>
+												<fx:include fx:id="payloadPreviewWidget" source="PayloadPreviewWidget.fxml" />
+											</content>
+										</Tab>
+									</tabs>
+								</TabPane>
+							</items>
+						</SplitPane>
+					</children>
+				</AnchorPane>
+			</items>
+		</SplitPane>
+	</center>
+	<top>
+		<VBox BorderPane.alignment="CENTER">
+			<children>
+				<fx:include fx:id="dashboardTopMenu" source="DashboardTopMenu.fxml" />
+				<fx:include fx:id="dashboardTopToolbar" source="DashboardTopToolbar.fxml" />
+			</children>
+		</VBox>
+	</top>
+</BorderPane>
