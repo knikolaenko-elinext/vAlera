@@ -138,7 +138,6 @@ public class BrowserController implements Initializable {
 		if (htmlElement.getClassName() != null) {
 			htmlElement.setClassName(htmlElement.getClassName().replace(" hovered-by-vAlera", ""));
 		}
-		this.currentlyHovered = null;
 	}
 
 	public Observable<HTMLElement> startHoverMode() {
